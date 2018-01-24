@@ -4,6 +4,8 @@
 # CVE: CVE-2016-1542 (BMC-2015-0010), CVE-2016-1543 (BMC-2015-0011)
 
 # By Paul Taylor / Foregenix Ltd
+# https://github.com/bao7uo/bmc_bladelogic/edit/master/BMC_rexec.py
+# https://www.foregenix.com/blog
 
 # Credit: https://github.com/ernw/insinuator-snippets/tree/master/bmc_bladelogic
 # Credit: https://github.com/yaolga
