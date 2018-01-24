@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 # BMC BladeLogic RSCD agent remote exec - XMLRPC version
+# CVE: CVE-2016-1542 (BMC-2015-0010), CVE-2016-1543 (BMC-2015-0011)
 
 # By Paul Taylor / Foregenix Ltd
 
