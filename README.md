@@ -6,10 +6,10 @@ Exploiting vulnerabilities in BMC BladeLogic RSCD agent
 Remote execution is performed using XMLRPC and has only been tested against Windows. The script will hang, but the command should execute.
 
 Nick Bloor has a much better execution exploit here:
-https://github.com/NickstaDB/PoC/tree/master/BMC_RSCD_RCE
-https://nickbloor.co.uk/2018/01/01/rce-with-bmc-server-automation/
-https://nickbloor.co.uk/2018/01/08/improving-the-bmc-rscd-rce-exploit/
-https://www.tenable.com/plugins/index.php?view=single&id=91947
+- https://github.com/NickstaDB/PoC/tree/master/BMC_RSCD_RCE
+- https://nickbloor.co.uk/2018/01/01/rce-with-bmc-server-automation/
+- https://nickbloor.co.uk/2018/01/08/improving-the-bmc-rscd-rce-exploit/
+- https://www.tenable.com/plugins/index.php?view=single&id=91947
 
 ## Credits
 
