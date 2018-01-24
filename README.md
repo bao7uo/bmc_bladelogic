@@ -14,7 +14,8 @@ Nick Bloor has a much better execution exploit here:
 ## Credits
 
 BMC_getUsers and BMC_changePwd are modified from to https://github.com/ernw/insinuator-snippets/tree/master/bmc_bladelogic
-I have added Windows version of getUsers (change password in Windows should be possible with the rexec).
+
+I have added Windows compatibility to getUsers (change password in Windows should be possible with the rexec).
 
 https://www.insinuator.net/2016/03/bmc-bladelogic-cve-2016-1542-and-cve-2016-1543/
 
