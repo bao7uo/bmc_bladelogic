@@ -27,6 +27,10 @@ BMC_getUsers and BMC_changePwd are modified from to https://github.com/ernw/insi
 
 I have added Windows compatibility to getUsers (change password in Windows should be possible with the rexec).
 
-https://www.insinuator.net/2016/03/bmc-bladelogic-cve-2016-1542-and-cve-2016-1543/
-
 Thanks to Nick Bloor for AWS image for testing.
+
+## Vendor links
+
+- https://docs.bmc.com/docs/ServerAutomation/87/release-notes-and-notices/flashes/notification-of-windows-rscd-agent-vulnerability-in-bmc-server-automation-cve-2016-5063
+- https://www.insinuator.net/2016/03/bmc-bladelogic-cve-2016-1542-and-cve-2016-1543/
+
