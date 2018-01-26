@@ -5,7 +5,9 @@ Exploiting vulnerabilities in BMC BladeLogic RSCD agent
 - CVE-2016-5063
 
 ## Published on exploit-db
-- https://www.exploit-db.com/exploits/43902/
+- BMC_rexec.py
+
+    - https://www.exploit-db.com/exploits/43902/
 
 ## Overview
 
