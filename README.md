@@ -4,6 +4,11 @@ Exploiting vulnerabilities in BMC BladeLogic RSCD agent
 - CVE-2016-1543 (BMC-2015-0011)
 - CVE-2016-5063
 
+## Published on exploit-db
+- https://www.exploit-db.com/exploits/43902/
+
+## Overview
+
 This method of remote execution was achieved by doing my own research - it is performed using XMLRPC and has only been tested against Windows. The script will hang, but the command should execute.
 
 ![rexec poc](images/BMC_rexec.png)
