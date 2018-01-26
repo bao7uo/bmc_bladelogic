@@ -24,6 +24,7 @@ Nick Bloor has a much better execution exploit using a different technique:
 ## Credits
 
 BMC_getUsers and BMC_changePwd are modified from to https://github.com/ernw/insinuator-snippets/tree/master/bmc_bladelogic
+- https://www.insinuator.net/2016/03/bmc-bladelogic-cve-2016-1542-and-cve-2016-1543/
 
 I have added Windows compatibility to getUsers (change password in Windows should be possible with the rexec).
 
@@ -32,5 +33,5 @@ Thanks to Nick Bloor for AWS image for testing.
 ## Vendor links
 
 - https://docs.bmc.com/docs/ServerAutomation/87/release-notes-and-notices/flashes/notification-of-windows-rscd-agent-vulnerability-in-bmc-server-automation-cve-2016-5063
-- https://www.insinuator.net/2016/03/bmc-bladelogic-cve-2016-1542-and-cve-2016-1543/
+- https://docs.bmc.com/docs/ServerAutomation/87/release-notes-and-notices/flashes/notification-of-critical-security-issue-in-bmc-server-automation-cve-2016-1542-cve-2016-1543
 
