@@ -1,9 +1,9 @@
 #!/usr/bin/python
 
 # Retrieving system users with BMC BladeLogic RSCD agent (checked for v8.6.01.66)
-# Copyright: ERNW
+# Original version Copyright: ERNW
 
-# Contrib: Paul Taylor / Foregenix Ltd
+# This version Contrib: Paul Taylor / Foregenix Ltd
 
 import socket
 import ssl
