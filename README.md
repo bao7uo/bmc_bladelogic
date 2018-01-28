@@ -29,7 +29,7 @@ After some research I was able to pull Windows users from the Windows BMC agent 
 
 ## Credits
 
-BMC_getUsers and BMC_changePwd are modified from to https://github.com/ernw/insinuator-snippets/tree/master/bmc_bladelogic
+BMC_getUsers and BMC_changePwd are adapted from https://github.com/ernw/insinuator-snippets/tree/master/bmc_bladelogic
 - https://www.insinuator.net/2016/03/bmc-bladelogic-cve-2016-1542-and-cve-2016-1543/
 
 Thanks to Nick Bloor for AWS image for testing.
