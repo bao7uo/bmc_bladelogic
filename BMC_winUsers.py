@@ -1,6 +1,6 @@
 #!/usr/bin/python2
 
-# Retrieving system users with BMC BladeLogic RSCD agent
+# Retrieving Windows system users with BMC BladeLogic RSCD agent
 # Tested against v8.3.00.64 (Windows version)
 # CVE-2016-5063
 
