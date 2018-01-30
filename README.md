@@ -11,7 +11,7 @@ Exploiting vulnerabilities in BMC BladeLogic RSCD agent
 - BMC_winUsers.py
     - https://www.exploit-db.com/exploits/43934/
 
-## BMC_rexec Overview
+## BMC_rexec.py Overview
 
 This method of remote execution was achieved by doing my own research - it is performed using XMLRPC and has only been tested against Windows. The script will hang, but the command should execute.
 
@@ -23,7 +23,7 @@ Nick Bloor has a much better execution exploit using a different technique:
 - https://nickbloor.co.uk/2018/01/08/improving-the-bmc-rscd-rce-exploit/
 - https://www.tenable.com/plugins/index.php?view=single&id=91947
 
-## BMC_winUsers Overview
+## BMC_winUsers.py Overview
 
 After some research I was able to pull Windows users from the Windows BMC agent over XML RPC, so I adapted the getUsers file from ernw/insinuator to make a Windows version (see the following screenshot). I also modified the ernw/insinuator version to make it a dual platform exploit.
 
