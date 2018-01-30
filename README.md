@@ -1,4 +1,5 @@
-# BMC Bladelogic RSCD, change password, user list and remote execution
+# BMC Bladelogic RSCD remote exploits for Linux and Windows
+## Change passwords, List users and Remote code execution
 Exploiting vulnerabilities in BMC BladeLogic RSCD agent
 - CVE-2016-1542 (BMC-2015-0010)
 - CVE-2016-1543 (BMC-2015-0011)
@@ -6,8 +7,9 @@ Exploiting vulnerabilities in BMC BladeLogic RSCD agent
 
 ## Published on exploit-db
 - BMC_rexec.py
-
     - https://www.exploit-db.com/exploits/43902/
+- BMC_winUsers.py
+    - https://www.exploit-db.com/exploits/43934/
 
 ## BMC_rexec Overview
 
@@ -24,10 +26,6 @@ Nick Bloor has a much better execution exploit using a different technique:
 ## BMC_winUsers Overview
 
 After some research I was able to pull Windows users from the Windows BMC agent over XML RPC, so I adapted the getUsers file from ernw/insinuator to make a Windows version (see the following screenshot). I also modified the ernw/insinuator version to make it a dual platform exploit.
-
-### Published on exploit-db
-- BMC_rexec.py
-    - https://www.exploit-db.com/exploits/43934/
 
 ![winUsers poc](images/BMC_winUsers.png)
 
