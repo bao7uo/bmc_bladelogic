@@ -25,6 +25,10 @@ Nick Bloor has a much better execution exploit using a different technique:
 
 After some research I was able to pull Windows users from the Windows BMC agent over XML RPC, so I adapted the getUsers file from ernw/insinuator to make a Windows version (see the following screenshot). I also modified the ernw/insinuator version to make it a dual platform exploit.
 
+### Published on exploit-db
+- BMC_rexec.py
+    - https://www.exploit-db.com/exploits/43934/
+
 ![winUsers poc](images/BMC_winUsers.png)
 
 ## Credits
