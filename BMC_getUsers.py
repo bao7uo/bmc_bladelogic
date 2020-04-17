@@ -81,7 +81,7 @@ sock.connect((HOST, PORT))
 
 sock.sendall("TLSRPC")
 
-wrappedSocket = ssl.wrap_socket(sock)
+wrappedSocket = ssl.wrap_socket(sock, cert_reqs=ssl.CERT_NONE, ssl_version=ssl.PROTOCOL_TLSv1, ciphers=None)
 
 adapter = MyAdapter()
 s = requests.session()
